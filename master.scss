@@ -6,10 +6,24 @@ body {
 }
 
 header {
-  background: #026;
-  // background: url('https://cdn.upbit.com/images/bg_main.dfb58d4.png');
-  background-size: cover;
+  ::before {
+    background: #026;
+    background-image: url('imgs/header.jpg');
+    background-position: center center;
+    background-size: cover;
+    filter: contrast(80%);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    content: '';
+    z-index: -1;
+  }
+
   color: #fff;
+  padding-bottom: 80px;
+  position: relative;
 
   section,
   article {
