@@ -1,3 +1,5 @@
+$main-width: 1170px;
+
 html,
 body {
   border: 0;
@@ -5,7 +7,15 @@ body {
   padding: 0;
 }
 
+body {
+  font-size: 22px;
+}
+
 header {
+  color: #fff;
+  padding-bottom: 80px;
+  position: relative;
+
   ::before {
     background: #026;
     background-image: url('imgs/header.jpg');
@@ -21,14 +31,10 @@ header {
     z-index: -1;
   }
 
-  color: #fff;
-  padding-bottom: 80px;
-  position: relative;
-
   section,
   article {
     margin: 0 auto;
-    width: 1170px;
+    width: $main-width;
   }
 
   section {
@@ -81,11 +87,21 @@ header {
 
     ul.highlight-text {
       background: #0062df;
+      border-radius: .1em;
       display: inline-block;
       font-size: 1.2em;
       font-weight: 700;
       list-style-type: none;
       padding: 4px;
     }
+  }
+}
+
+main {
+  margin: 0 auto;
+  width: $main-width;
+
+  section:not(:last-child) {
+    border-bottom: 1px solid grey;
   }
 }
