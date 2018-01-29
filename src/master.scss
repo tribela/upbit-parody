@@ -1,14 +1,41 @@
 $main-width: 1170px;
+$break-mobile: 800px;
 
 html,
 body {
   border: 0;
   margin: 0;
   padding: 0;
+  overflow-x: hidden;
 }
 
 body {
   font-size: 22px;
+
+  @media screen and (max-width: $break-mobile) {
+    font-size: inherit;
+  }
+}
+
+img {
+  max-width: 100%;
+}
+
+header,
+main,
+footer {
+  section,
+  article {
+    margin: 0 auto;
+    width: $main-width;
+
+    @media screen and (max-width: $break-mobile) {
+      box-sizing: border-box;
+      margin: 0 auto;
+      padding: 0 .5em;
+      width: 100%;
+    }
+  }
 }
 
 header {
@@ -16,6 +43,7 @@ header {
   color: #fff;
   padding-bottom: 80px;
   position: relative;
+  width: 100%;
 
   ::before {
     background: #026;
@@ -32,12 +60,6 @@ header {
     z-index: -1;
   }
 
-  section,
-  article {
-    margin: 0 auto;
-    width: $main-width;
-  }
-
   section {
     padding-top: 12px;
 
@@ -49,6 +71,10 @@ header {
     nav {
       display: inline-block;
       margin-left: 200px;
+
+      @media screen and (max-width: $break-mobile) {
+        margin-left: 30px;
+      }
 
       a {
         color: #e8eaf3;
@@ -102,11 +128,8 @@ header {
   }
 }
 
-main {
-  margin: 0 auto;
-  width: $main-width;
-
-  section:not(:last-child) {
+main section {
+  &:not(:last-child) {
     border-bottom: 1px solid grey;
   }
 }
@@ -115,14 +138,10 @@ footer {
   background: lightslategrey;
   padding-top: 40px;
 
-  section {
-    margin: 0 auto;
-    width: $main-width;
-  }
-
   ul.donations {
     display: inline-block;
     list-style-type: none;
+    word-break: break-all;
 
     li:not(:last-child) {
       margin-bottom: 30px;
