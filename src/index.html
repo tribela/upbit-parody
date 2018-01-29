@@ -3,8 +3,9 @@
   <head>
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
-    <script src="index.js"></script>
     <link rel="stylesheet" href="./master.scss" media="all" charset="utf-8">
+    <script src="https://unpkg.com/dialog-polyfill"></script>
+    <script src="index.js"></script>
     <title>업비트 - 대한민국 최다 암호화폐 거래소의 피싱 사이트</title>
   </head>
   <body>
@@ -12,14 +13,16 @@
       <section>
         <h1>Uрbit</h1>
         <nav>
-          <a href="login">Login</a>
+          <a href="https://github.com/Kjwon15/upbit-parody">GitHub</a>
+          <a href="https://steemit.com/@kjwon15">Steem</a>
         </nav>
         <span class="buttons">
-          <button>Login</button>
+          <button class="login">Login</button>
         </span>
       </section>
       <article>
         <strong>대한민국 최다 암호화폐 거래소</strong>
+        <small>의 피싱 사이트가 될 수 있는 도메인</small>
         <div class="text-bold">
           <ul class="highlight-text">
             <li>8</li>
@@ -80,5 +83,9 @@
         </ul>
       </section>
     </main>
+    <dialog id="loginWarning">
+      <p>이 사이트는 패러디 사이트였지만 같은 주소를 달고 피싱 사이트를 만들었다면 과연 로그인을 할 때 의심을 했을까요?</p>
+      <button class="close">close</button>
+    </dialog>
   </body>
 </html>
