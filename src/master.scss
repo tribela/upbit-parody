@@ -26,8 +26,10 @@ main,
 footer {
   section,
   article {
+    box-sizing: content-box;
     margin: 0 auto;
-    width: $main-width;
+    max-width: $main-width;
+    padding: 0 2em;
 
     @media screen and (max-width: $break-mobile) {
       box-sizing: border-box;
