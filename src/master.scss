@@ -110,3 +110,26 @@ main {
     border-bottom: 1px solid grey;
   }
 }
+
+footer {
+  background: lightslategrey;
+  padding-top: 40px;
+
+  section {
+    margin: 0 auto;
+    width: $main-width;
+  }
+
+  ul.donations {
+    display: inline-block;
+    list-style-type: none;
+
+    li:not(:last-child) {
+      margin-bottom: 30px;
+    }
+
+    img {
+      vertical-align: middle;
+    }
+  }
+}
