@@ -1,5 +1,3 @@
-import './master.scss';
-
 window.addEventListener('load', () => {
     document.body.addEventListener('click', (event) => {
         let target = event.target;
